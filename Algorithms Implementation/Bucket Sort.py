@@ -9,9 +9,8 @@ numberOfBuckets = int((math.sqrt(len(unsortedArray))))
 
 bucketList = [ [] for _ in range (numberOfBuckets)]
 
-print(bucketList)
-
 for element in unsortedArray:
+    ##normalize distribution formula
     index = math.floor(((element - min_value)/(max_value - min_value + 1)) * numberOfBuckets)
     bucketList[index].append(element)
     
