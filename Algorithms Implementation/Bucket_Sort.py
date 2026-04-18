@@ -14,7 +14,7 @@ for element in unsortedArray:
     ##normalize distribution formula
     index = math.floor(((element - min_value)/(max_value - min_value + 1)) * numberOfBuckets)
     bucketList[index].append(element)
-    
+
 final_sorted_list = []
 
 for list in bucketList:
