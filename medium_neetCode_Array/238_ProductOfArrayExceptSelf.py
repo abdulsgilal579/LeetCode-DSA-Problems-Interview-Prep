@@ -25,5 +25,18 @@ The input is generated such that answer[i] is guaranteed to fit in a 32-bit inte
 
 Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)"""
 
+intArray = [1,2,4,6]
 
-#Solution
+def productArrayExceptSelft(array):
+    newArray = []
+    for i in range(0, len(array)):
+        prefix = 1
+        for suffix in range(0,array:
+            result *= j
+        print(result)
+    return
+
+print(productArrayExceptSelft(intArray))
+
+
+
