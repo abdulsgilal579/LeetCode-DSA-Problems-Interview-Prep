@@ -29,7 +29,7 @@ Follow up: Can you solve the problem in O(1) extra space complexity? (The output
 #Brute Force Approach
 #--------------------------------------
 
-# intArray = [1,2,4,6]
+# intArray = [1,2,3,4]
 #
 # def productOfArrayExceptItself(array):
 #     new_array = [0]*len(array)
@@ -48,5 +48,19 @@ Follow up: Can you solve the problem in O(1) extra space complexity? (The output
 #Optimal Solution The Most Efficient One
 #----------------------------------------
 
+#Time Complexity of O(n)
 
+array = [1,2,3,4]
+prefixArray = [1]*len(array)
+for i in range(1, len(array)):
+    prefixArray[i] = prefixArray[i-1] * array[i-1]
 
+suffixArray = [1]*len(array)
+for i in range(len(array)-2, -1, -1):
+    suffixArray[i] = suffixArray[i+1] * array[i+1]
+
+finalArray = [1]*len(array)
+for i in range(0,len(array)):
+    finalArray[i] = prefixArray[i]*suffixArray[i]
+
+print(finalArray)
