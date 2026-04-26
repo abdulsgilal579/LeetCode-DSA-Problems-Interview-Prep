@@ -30,7 +30,7 @@ nums = [100,4,200,1,3,2]
 def longestStreak(nums):
     numSet = set(nums)
     result = 0
-    for number in nums:
+    for number in numSet:
         if number - 1 not in numSet:
             current_Streak = 1
             while number + current_Streak in numSet:
