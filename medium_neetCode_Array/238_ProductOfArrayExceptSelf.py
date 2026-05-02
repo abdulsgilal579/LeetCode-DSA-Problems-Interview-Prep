@@ -23,11 +23,12 @@ Constraints:
 The input is generated such that answer[i] is guaranteed to fit in a 32-bit integer.
 
 
-Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)"""
+Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
+"""
 
-#--------------------------------------
-#Brute Force Approach
-#--------------------------------------
+# --------------------------------------
+# Brute Force Approach
+# --------------------------------------
 
 # intArray = [1,2,3,4]
 #
@@ -44,23 +45,23 @@ Follow up: Can you solve the problem in O(1) extra space complexity? (The output
 #
 # print(productOfArrayExceptItself(intArray))
 
-#----------------------------------------
-#Optimal Solution The Most Efficient One
-#----------------------------------------
+# ----------------------------------------
+# Optimal Solution The Most Efficient One
+# ----------------------------------------
 
-#Time Complexity of O(n)
+# Time Complexity of O(n)
 
-array = [1,2,3,4]
-prefixArray = [1]*len(array)
+array = [1, 2, 3, 4]
+prefixArray = [1] * len(array)
 for i in range(1, len(array)):
-    prefixArray[i] = prefixArray[i-1] * array[i-1]
+    prefixArray[i] = prefixArray[i - 1] * array[i - 1]
 
-suffixArray = [1]*len(array)
-for i in range(len(array)-2, -1, -1):
-    suffixArray[i] = suffixArray[i+1] * array[i+1]
+suffixArray = [1] * len(array)
+for i in range(len(array) - 2, -1, -1):
+    suffixArray[i] = suffixArray[i + 1] * array[i + 1]
 
-finalArray = [1]*len(array)
-for i in range(0,len(array)):
-    finalArray[i] = prefixArray[i]*suffixArray[i]
+finalArray = [1] * len(array)
+for i in range(0, len(array)):
+    finalArray[i] = prefixArray[i] * suffixArray[i]
 
 print(finalArray)

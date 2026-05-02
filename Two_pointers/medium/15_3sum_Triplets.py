@@ -1,10 +1,11 @@
-array = [-1,0,1,2,-1,-4]
+array = [-1, 0, 1, 2, -1, -4]
+
 
 def ThreeSum(array):
     sortedArray = sorted(array)
     tripletList = []
     for i in range(0, len(array) - 2):
-        if i > 0 and sortedArray[i] == sortedArray[i-1]:
+        if i > 0 and sortedArray[i] == sortedArray[i - 1]:
             continue
         left = i + 1
         right = len(array) - 1

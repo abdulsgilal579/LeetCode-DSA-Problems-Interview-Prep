@@ -1,4 +1,5 @@
-#Solution
+# Solution
+
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -9,35 +10,6 @@ class Solution:
                 return [seen[compliment], index]
             else:
                 seen[number] = index
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #
@@ -63,9 +35,3 @@ class Solution:
 #             print(f"After addition {seen}")
 #
 # print(twoSum(array, target))
-
-
-
-
-
-
